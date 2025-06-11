@@ -62,13 +62,15 @@ function comecaCronometro() {
     setInterval(atualizaCronometro, 1000);
 }
 
-comecaCronometro();
 
 function atualizaCronometro() {
 for(let i=0;i<contadores.length; i++) {
 coontadores[i].textContent = calculaTempo (tempos[i]);
 }
 }
-
+function comecaCronometro(){
 atualizaCronometro();
 setInterval(atualizaCronometro,1000);
+}
+
+comecaCronometro();
