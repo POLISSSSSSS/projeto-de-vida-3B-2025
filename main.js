@@ -19,17 +19,8 @@ const tempoObjetivo1 = new Date("2023-10-05T00:00:00");
 const tempoObjetivo2 = new Date("2023-12-05T00:00:00");
 const tempoObjetivo3 = new Date("2023-12-30T00:00:00");
 const tempoObjetivo4 = new Date("2024-02-01T00:00:00");
-consttempos=[tempoObjetivo1,tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
+const tempos=[tempoObjetivo1,tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
-function atualizaCronometro() {
-for(let i=0;i<contadores.length; i++){
-coontadores[i].textContent = calculaTempo (tempos[i]);
-}
-}
-
-
-coontadores[0].textContent = calculaTempo (tempoObjetivo1);
-coontadores[1].textContent = calculaTempo (tempoObjetivo1);
 
 
 
@@ -72,3 +63,12 @@ function comecaCronometro() {
 }
 
 comecaCronometro();
+
+function atualizaCronometro() {
+for(let i=0;i<contadores.length; i++) {
+coontadores[i].textContent = calculaTempo (tempos[i]);
+}
+}
+
+atualizaCronometro();
+setInterval(atualizaCronometro,1000);
