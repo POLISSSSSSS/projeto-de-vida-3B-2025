@@ -91,6 +91,13 @@ body {
   text-transform: uppercase;
 }
 
+.contador {
+  display: flex;
+  justify-content: center;
+min-width: 100px;
+}
+
+
 .contador{
 display: flex;
 font-size: 20px;
@@ -98,7 +105,6 @@ text-align: center;
 
 
 }
-
 
 
 
